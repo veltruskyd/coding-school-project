@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin: 0;
+    background-color: #0B691F;
+    height: 3rem;
+    }
+
+header {
+margin: 0;
+height: 30rem;
+background-image: url("images/header.png");
+
+}
+
+h1 {
+    margin: 0;
+    font-family: "Monofett", monospace;
+    font-size: 15rem;
+    text-align: center;
+    }
+
+h2 {
+    margin: 5;
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    font-size: 7rem;
+}
+
+#headerPridat {
+    font-family: "Roboto Condensed", sans-serif;
+    align-items: center;
+}
