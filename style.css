@@ -5,13 +5,16 @@
 
 nav {
     margin: 0;
+    width: 100%;
     background-color: #0B691F;
     height: 3rem;
     }
 
 header {
 margin: 0;
-height: 30rem;
+text-align: center;
+width: 100%;
+height: 50vh;
 background-image: url("images/header.png");
 
 }
@@ -19,18 +22,57 @@ background-image: url("images/header.png");
 h1 {
     margin: 0;
     font-family: "Monofett", monospace;
-    font-size: 15rem;
-    text-align: center;
+    font-size: 15vh;
     }
 
 h2 {
-    margin: 5;
+    margin: 3vh;
     font-family: "Roboto Condensed", sans-serif;
-    text-align: center;
-    font-size: 7rem;
+    font-size: 10vh;
 }
 
-#headerPridat {
+.buttonLink {
+    padding: min(2vh, 14px) min(3vh, 25px);
+    background-color: rgb(255, 19, 66);
     font-family: "Roboto Condensed", sans-serif;
-    align-items: center;
+    font-size: 2vh;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.buttonLink:hover {
+    background-color: rgb(119, 17, 17);
+}
+
+#best {
+    width: 100%;
+    height: fit-content;
+
+    /**used to scroll text*/
+    white-space: nowrap;    
+    overflow-x: scroll;
+    overflow-y: hidden; 
+  }
+
+  #new {
+    width: 100%;
+    height: fit-content;
+
+    /**used to scroll text*/
+    white-space: nowrap;    
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+.karta {
+    border-radius: 45px 0 45px 0;
+    padding: 1vh;
+    margin: 2vh;
+    background-color: #0B691F;
+    width: 50vh;
+    height: 60vh;
+    float: none;
+    display: inline-block;
 }
