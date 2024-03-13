@@ -12,6 +12,19 @@
   
 <body> 
     
+<div id="popLogin">
+    <form action="/coding-school-project/" class="registrace" method="post">
+        <h3>Registrace nového uživatele</h3>
+        <label for="registernName">Uživatelské jméno:</label>
+        <input type="text" name="registerName" required autofocus>
+        <label for="registerEmail">Email:</label>
+        <input type="password" name="registerPassword"  required>
+        <label for="registerPassword">Heslo:</label>
+        <input type="password" name="registerPassword"  required>
+        <button class="registraceButton" type="submit">Registrovat</button>
+    </form>
+</div>
+
 <nav>
     <div id="navigace1"><img src="./images/menu.svg" alt="menu">
         <div class="dropdown-content">
@@ -23,8 +36,8 @@
         </div>
     </div>
     <div id="navigace2"></div>
-    <div id="navigace3"><a href="./register.html"><img src="./images/register.svg" alt="register"></a></div>
-    <div id="navigace4"><a href="./login.html"><img src="./images/login.svg" alt="login"></a></div>
+    <div id="navigace3"><a href="./register.html" title="Registrace"><img src="./images/register.svg" alt="register"></a></div>
+    <div id="navigace4"><a href="./login.html" title="Přihlášení"><img src="./images/login.svg" alt="login"></a></div>
     <div id="navigace5"></div>
 </nav>
 
@@ -67,27 +80,27 @@
 <section id="new">
     <div class="karta">
         <div class="kartaImg"></div>
-        <p>TOTO JE DIV</p>
+        <p class="kartaText">Kladno - Lány</p>
     </div>
     <div class="karta">
         <div class="kartaImg"></div>
-        <p>TOTO JE DRUHÝ DIV</p>
+        <p class="kartaText">Kladno - Letiště Václava Havla</p>
     </div>
     <div class="karta">
         <div class="kartaImg"></div>
-        <p>TOTO JE TŘETÍ DIV</p>
+        <p class="kartaText">Praha Dejvice - Hl. nádraží</p>
     </div>
     <div class="karta">
         <div class="kartaImg"></div>
-        <p>TOTO JE ČTVRTÝ DIV</p>
+        <p class="kartaText">TOTO JE ČTVRTÝ DIV</p>
     </div>
     <div class="karta">
         <div class="kartaImg"></div>
-        <p>TOTO JE PÁTÝ DIV</p>
+        <p class="kartaText">TOTO JE PÁTÝ DIV</p>
     </div>
     <div class="karta">
         <div class="kartaImg"></div>
-        <p>TOTO JE ŠESTÝ DIV</p>
+        <p class="kartaText">TOTO JE ŠESTÝ DIV</p>
     </div>
 </section>
 </main>
