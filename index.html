@@ -12,16 +12,16 @@
   
 <body> 
     
-<div id="popLogin">
-    <form action="/coding-school-project/" class="registrace" method="post">
-        <h3>Registrace nového uživatele</h3>
-        <label for="registernName">Uživatelské jméno:</label>
-        <input type="text" name="registerName" required autofocus>
-        <label for="registerEmail">Email:</label>
-        <input type="password" name="registerPassword"  required>
-        <label for="registerPassword">Heslo:</label>
-        <input type="password" name="registerPassword"  required>
-        <button class="registraceButton" type="submit">Registrovat</button>
+<div id="popRoute">
+    <form action="/coding-school-project/" class="addRoute" method="post">
+        <h3>Přidat novou trasu</h3>
+        <label for="addRoute--start">Cesta odkud:</label>
+        <input class="form" type="text" name="addRoute--start" required>
+        <label for="addRoute--end">Cesta kam:</label>
+        <input class="form" type="text" name="addRoute--end"  required>
+        <label for="addRoute--maps">Odkaz Mapy.CZ:</label>
+        <input class="form" type="text" name="addRoute--maps"  required>
+        <button class="addRoute--Button" type="submit">Přidat</button>
     </form>
 </div>
 
@@ -44,7 +44,7 @@
 <header>
     <h1>C</h1>
     <h2>Cyklistika pohodlně</h2>
-    <a href="index.html" class="buttonLink">Přidej trasu</a>
+    <button id="buttonLink">Přidej trasu</button>
 </header>
 
 <main>
@@ -114,7 +114,7 @@
     </div>
 </footer>
 
-
+<script src="./btnClick.js"></script>
 </body> 
   
 </html> 
