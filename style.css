@@ -16,12 +16,11 @@
     height: 100%;
     overflow: auto;
     background-image: url("./images/pop_background.png");
-    overflow: auto;
     animation-name: animace;
     animation-duration: 0.5s;
 }
 
-.addRoute {
+.formContainer {
     border-radius: 45px 0 45px 0;
     border: #0B691F solid 25px;
     height: 50vh;
@@ -32,12 +31,22 @@
     gap: 1vh;
     animation-name: animace;
     animation-duration: 0.5s;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 @keyframes animace {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
   }
+
+  #divLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/login_background.png");
+    background-size: cover;
+}
 
 .form {
     border-top: none;
@@ -235,4 +244,13 @@ footer {
     width: 70%;
     text-decoration: none;
     text-align: right;
+}
+
+#repw--confirm {
+    color: red;
+    display: none;
+}
+
+#pw--short {
+    color: red;
 }
