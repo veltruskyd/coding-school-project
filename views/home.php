@@ -1,4 +1,7 @@
-<?php include "./objects/header.php"; ?>
+<?php use Core\View;
+
+
+View::render('header'); ?>
   
 <body> 
 
@@ -15,7 +18,7 @@
     </form>
 </div>
 
-<?php include "./objects/nav.php"; ?>
+<?php View::render('nav'); ?>
 
 <header>
     <h1>C</h1>
@@ -81,7 +84,7 @@
 </section>
 </main>
 
-<?php include "../coding-school-project/objects/footer.php"; ?>
+<?php View::render('footer'); ?>
 
 <script src="./script/btnClick.js"></script>
 </body> 

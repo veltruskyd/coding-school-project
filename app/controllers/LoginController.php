@@ -1,10 +1,12 @@
 <?php
 
+use Core\View;
+
 class LoginController
 {
     public function show()
     {
-        echo "TADY login";
+        View::render('login');
     }
 
 }

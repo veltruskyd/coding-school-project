@@ -1,10 +1,12 @@
 <?php
 
+use Core\View;
+
 class RegisterController
 {
     public function show()
     {
-        echo "TADY  reg";
+        View::render('register');
     }
 
 }

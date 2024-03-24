@@ -1,10 +1,11 @@
 <?php
+use Core\View;
 
 class HomeController
 {
     public function show()
     {
-        include "./views/home.php";
+        View::render('home');
     }
 
 }

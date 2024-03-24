@@ -1,7 +1,10 @@
 <?php
+require "autoload.php";
+
 require "./app/controllers/HomeController.php";
 require "./app/controllers/LoginController.php";
 require "./app/controllers/RegisterController.php";
+
 
 
 

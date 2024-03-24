@@ -1,8 +1,11 @@
-<?php include "../objects/header.php"; ?>
+<?php use Core\View;
+
+
+View::render('header'); ?>
   
 <body> 
 
-<?php include "../objects/nav.php"; ?>
+<?php View::render('nav'); ?>
 
 <main>
 
@@ -19,7 +22,7 @@
 
 </main>
 
-<?php include "../objects/footer.php"; ?>
+<?php View::render('footer'); ?>
 
 </body> 
   

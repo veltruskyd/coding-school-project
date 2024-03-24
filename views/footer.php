@@ -6,3 +6,4 @@
     Cyklistika pohodlně je web zaměřený na sdílení pohodlných a bezpečných cyklostezek pro pohyb mezi městy a uvnitř nich.
     </div>
 </footer>
+
