@@ -6,8 +6,9 @@ class View
 {
     public static function render($view_name, $data = [])
     {
-        foreach ($data ?? [] as $variable_name => $value) {
-            $variable_name = $variable_name;
+        //Projde vložené pole a vytvoří znich data klíč -> hodnota 
+        foreach ($data ?? [] as $key => $value) {
+            $variable_name = $key;
             $$variable_name = $value;
         }
         

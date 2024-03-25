@@ -29,6 +29,7 @@ View::render('header'); ?>
 
 <main>
 <h3>Nejlepší trasy</h3>
+<!-- 
 <section id="best">
     <div class="karta">
         <div class="kartaImg"></div>
@@ -55,6 +56,23 @@ View::render('header'); ?>
         <p class="kartaText">TOTO JE ŠESTÝ DIV</p>
     </div>
 </section>
+-->
+
+<section id="best">
+<?php
+foreach ($tracks as $track) 
+    {echo '
+    
+        <div class="karta">
+            <div class="kartaImg"></div>
+            <p class="kartaText">' . $track['From']." - ".$track['To'] . '</p>
+        </div>
+    
+    ';
+    }
+        ?>
+</section>
+
 
 <h3>Nejnovější trasy</h3>
 <section id="new">
