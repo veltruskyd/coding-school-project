@@ -7,8 +7,8 @@ class View
     public static function render($view_name, $data = [])
     {
         //Projde vložené pole a vytvoří znich data klíč -> hodnota 
-        foreach ($data ?? [] as $key => $value) {
-            $variable_name = $key;
+        foreach ($data ?? [] as $variable_name => $value) {
+            //$variable_name = $key;
             $$variable_name = $value;
         }
         
@@ -16,3 +16,5 @@ class View
         include "views/$view_name.php";
     }
 }
+
+?>
