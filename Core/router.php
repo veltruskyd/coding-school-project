@@ -38,7 +38,8 @@ class Router
             $controller = $this->routes[$url]['controller'];
             $callback = $this->routes[$url]['callback'];
     
-            
+            $controller = new $controller();
+            $controller->$callback();
 
 
         }else{
