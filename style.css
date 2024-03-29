@@ -41,7 +41,7 @@
     to {top: 0; opacity: 1}
   }
 
-  #divLogin {
+#divLogin {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,10 +218,25 @@ h3 {
     display: block;
     margin:auto;
     position: relative;
-    background-image: linear-gradient(0deg, rgba(241,233,163,0.25), rgba(0,0,0,0)), url("./thumbnail/kladno_lvh.jpg");
+    background: linear-gradient(0deg, rgba(241,233,163,1), rgba(0,0,0,0));
     background-size: cover;
     background-position: 50%;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.24);
+}
+
+.trackImg {
+    width: 25vh;
+    height: 30vh;
+    border-radius: 45px 0 45px 0;
+    opacity: 80%;
+    object-fit:fill;
+    transition: opacity 500ms 0ms ease-in-out;
+    
+}
+
+.trackImg:hover {
+    opacity: 100%;
+    
 }
 
 .kartaText {

@@ -7,7 +7,7 @@ View::render('header'); ?>
 <body> 
 
 <div id="popRoute">
-    <form action="/coding-school-project/" class="formContainer" method="post">
+    <form action="/coding-school-project/home.php" class="formContainer" method="post">
         <h3>Přidat novou trasu</h3>
         <label for="addRoute--start">Cesta odkud:</label>
         <input class="form" type="text" name="addRoute--start" required>
@@ -32,7 +32,9 @@ View::render('header'); ?>
 
 <section id="best">
     
-<?php include 'card.php';?>
+<?php 
+$sortingParam = 'best';
+include 'card.php';?>
 
 </section>
 

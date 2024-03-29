@@ -9,10 +9,15 @@ class HomeController
 {
     public function show()
     {
-        View::render('home', [
+       return View::render('home', [
             'tracks'=> (new Track)->all(), 
             ]);
     }
+
+    /**public function create()
+    {
+       //var_dump($_POST[addRoute--start]);
+    }*/
 
 } 
 ?>
