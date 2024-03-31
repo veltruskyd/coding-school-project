@@ -9,6 +9,7 @@ class BaseModel
 
     public function all()
     {
+        $this->data = $this->database->query('SELECT * from tracks');
         return $this->data;
     }
 

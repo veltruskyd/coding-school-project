@@ -2,6 +2,7 @@
 
 namespace Core;
 
+
 class View
 {
     public static function render($view_name, $data = [])
@@ -16,5 +17,7 @@ class View
         include "views/$view_name.php";
     }
 }
+
+
 
 ?>

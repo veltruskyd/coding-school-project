@@ -2,9 +2,18 @@
 
 namespace app\Models;
 
+use Core\database;
+
+
 class Track extends BaseModel
-{
-    protected $data = 
+{   
+    public function all() {
+        $database = new Database();
+        $database->connect();
+        return $database->sql('SELECT * from tracks');
+    }
+
+    /*protected $data = 
     [
         [
             "id" => 1,
@@ -12,7 +21,7 @@ class Track extends BaseModel
             "To" => "Lány",
             "Mapy_link" => "www.mapy.cz",
             "Owner_id" => 1,
-            "Img" => "./thumbnail/kladno_lany.jpg",
+            "Img" => "./thumbnail/default_card.png",
             "Like" => 0,
         ],
         [
@@ -24,6 +33,6 @@ class Track extends BaseModel
             "Img" => "./thumbnail/kladno_lvh.jpg",
             "Like" => 0,
         ],
-    ];
+    ];*/
 
 }
