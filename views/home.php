@@ -8,14 +8,14 @@ View::render('header'); ?>
 
 
 <div id="popRoute">
-    <form action="../coding-school-project/" class="formContainer" method="post">
+    <form action="/coding-school-project/" class="formContainer" method="post">
         <h3>Přidat novou trasu</h3>
-        <label for="addRoute--start">Cesta odkud:</label>
-        <input class="form" type="text" name="addRoute--start" required>
-        <label for="addRoute--end">Cesta kam:</label>
-        <input class="form" type="text" name="addRoute--end"  required>
-        <label for="addRoute--maps">Odkaz Mapy.CZ:</label>
-        <input class="form" type="text" name="addRoute--maps"  required>
+        <label for="addRouteStart">Cesta odkud:</label>
+        <input class="form" type="text" name="addRouteStart" required>
+        <label for="addRouteEnd">Cesta kam:</label>
+        <input class="form" type="text" name="addRouteEnd"  required>
+        <label for="addRouteMaps">Odkaz Mapy.CZ:</label>
+        <input class="form" type="text" name="addRouteMaps"  required>
         <button class="addRoute--Button" type="submit">Přidat</button>
     </form>
 </div>

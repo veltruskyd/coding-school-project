@@ -8,31 +8,24 @@ use Core\database;
 class Track extends BaseModel
 {   
     public function all() {
-        $database = new Database();
-        $database->connect();
-        return $database->sql('SELECT * from tracks');
+        
+
+        return $this->database->dotaz('SELECT * FROM tracks');
     }
 
-    /*protected $data = 
-    [
-        [
-            "id" => 1,
-            "From" => "Kladno",
-            "To" => "Lány",
-            "Mapy_link" => "www.mapy.cz",
-            "Owner_id" => 1,
-            "Img" => "./thumbnail/default_card.png",
-            "Like" => 0,
-        ],
-        [
-            "id" => 2,
-            "From" => "Kladno",
-            "To" => "Letiště Václava Havla",
-            "Mapy_link" => "www.mapy.cz",
-            "Owner_id" => 1,
-            "Img" => "./thumbnail/kladno_lvh.jpg",
-            "Like" => 0,
-        ],
-    ];*/
+    public function best() {
+        
+
+        return $this->database->dotaz('SELECT * FROM tracks ORDER BY `Like` DESC');
+    }
+
+    public function create(array $data = [])
+    {
+        $this->database->dotaz ("INSERT INTO tracks (user_id,`From`,`To`, Mapy_link,img) 
+        VALUES (1," . "'" .$data['addRouteStart']. "'" . ", " . "'" .$data['addRouteEnd']. "'" . "," . "'" .$data['addRouteMaps']. "'" . ", './thumbnail/default_card.png')");
+
+    
+    }
+
 
 }

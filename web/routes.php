@@ -10,6 +10,7 @@ $router = new Router();
 $router->addRoute('/coding-school-project/', HomeController::class, 'show', 'GET');
 $router->addRoute('/coding-school-project/', HomeController::class, 'create', 'POST');
 $router->addRoute('/coding-school-project/HOME', HomeController::class, 'show', 'GET');
+$router->addRoute('/coding-school-project/HOME', HomeController::class, 'create', 'POST');
 
 $router->addRoute('/coding-school-project/login', LoginController::class, 'show', 'GET');
 

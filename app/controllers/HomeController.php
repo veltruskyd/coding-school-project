@@ -11,11 +11,11 @@ class HomeController
 
 
 
-    /*public function __contruct()
-    {
+    
+    public function __construct() {
         $this->track = new Track();
     }
-*/
+
 
 
     public function show()
@@ -30,7 +30,8 @@ class HomeController
 
     public function create()
     {
-        $track = (new Track)->create($_POST);
+        $this->track->create($_POST);
+        header('location: /coding-school-project/');
     }
 } 
 ?>

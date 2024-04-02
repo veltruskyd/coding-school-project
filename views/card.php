@@ -4,8 +4,10 @@ use app\utils\debug;
 use app\Models\Track;
 
 
-foreach ($tracks as $track) 
-    {echo '
+foreach ($tracks as $track) {
+    
+
+    echo '
     
         <div class="karta">
             <div class="kartaImg">
@@ -13,7 +15,10 @@ foreach ($tracks as $track)
             </div>
             <p class="kartaText">' . $track['From']." - ".$track['To'] . '</p>
         </div>
+
     
     ';
     }
+
+
         ?>

@@ -28,16 +28,6 @@ class Router
     }
 
 
-    public static function post()
-    {
-
-    }
-
-    public static function get()
-    {
-
-    }
-
     public function run()
     {
         //zjištění požadované URL

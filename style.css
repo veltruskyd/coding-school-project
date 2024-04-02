@@ -211,6 +211,11 @@ h3 {
     display: inline-block;
 }
 
+.karta_best {
+    display: none;
+}
+
+
 .kartaImg {
     border-radius: 45px 0 45px 0;
     width: 25vh;

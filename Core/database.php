@@ -9,7 +9,7 @@ class database
     protected $connection;
 
 
-    public function connect () {
+    public function __construct() {
         $servername = "localhost";
         $user = "root";
         $password = "";
@@ -30,9 +30,16 @@ class database
         
     }
 
-    public function sql(string $sql){
-        $result = $this->connection->query('SELECT * FROM tracks');
-        return $result->fetch_all(MYSQLI_ASSOC);
+    public function dotaz(string $sql){
+        $result = $this->connection->query($sql);
+
+        //pokud promena sql obsahuje slovo SELECT tak se pustí fetch jinak ne
+
+        if(strpos($sql, "SELECT") !== false){
+            return $result->fetch_all(MYSQLI_ASSOC);
+        }
+
+        
     }
         
 }

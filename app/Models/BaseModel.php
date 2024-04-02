@@ -2,9 +2,17 @@
 
 namespace app\Models;
 
+use Core\database;
 
-class BaseModel 
-{
+class BaseModel {
+
+    protected $database;
+
+    public function __construct() {
+        $this->database = new Database();
+
+    }
+
     protected $data = [];
 
     public function all()
