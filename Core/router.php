@@ -8,7 +8,7 @@ use app\controllers\HomeController;
 
 
 
-class Router
+class router
 {
 
     public $routes = [];

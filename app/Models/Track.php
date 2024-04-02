@@ -19,6 +19,18 @@ class Track extends BaseModel
         return $this->database->dotaz('SELECT * FROM tracks ORDER BY `Like` DESC');
     }
 
+    public function new() {
+        
+
+        return $this->database->dotaz('SELECT * FROM tracks ORDER BY `id` DESC');
+    }
+
+    public function my() {
+        
+
+        return $this->database->dotaz('SELECT * FROM tracks where `user_id` = 1');
+    }
+
     public function create(array $data = [])
     {
         $this->database->dotaz ("INSERT INTO tracks (user_id,`From`,`To`, Mapy_link,img) 

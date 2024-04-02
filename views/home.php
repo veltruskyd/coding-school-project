@@ -1,4 +1,7 @@
-<?php use Core\View;
+<?php 
+
+use Core\View;
+use Core\router;
 use app\utils\debug;
 
 
@@ -6,6 +9,10 @@ View::render('header'); ?>
   
 <body> 
 
+<?php
+var_dump( parse_url($_SERVER['REQUEST_METHOD'] . $_SERVER['REQUEST_URI'])['path']);
+
+?>
 
 <div id="popRoute">
     <form action="/coding-school-project/" class="formContainer" method="post">
@@ -29,43 +36,12 @@ View::render('header'); ?>
 </header>
 
 <main>
-<h3>Nejlepší trasy</h3>
-
-<section id="best">
-    
 <?php
-include 'card.php';?>
+include "views/card.php";
+?>
 
 </section>
 
-
-<h3>Nejnovější trasy</h3>
-<section id="new">
-    <div class="karta">
-        <div class="kartaImg"></div>
-        <p class="kartaText">Kladno - Lány</p>
-    </div>
-    <div class="karta">
-        <div class="kartaImg"></div>
-        <p class="kartaText">Kladno - Letiště Václava Havla</p>
-    </div>
-    <div class="karta">
-        <div class="kartaImg"></div>
-        <p class="kartaText">Praha Dejvice - Hl. nádraží</p>
-    </div>
-    <div class="karta">
-        <div class="kartaImg"></div>
-        <p class="kartaText">TOTO JE ČTVRTÝ DIV</p>
-    </div>
-    <div class="karta">
-        <div class="kartaImg"></div>
-        <p class="kartaText">TOTO JE PÁTÝ DIV</p>
-    </div>
-    <div class="karta">
-        <div class="kartaImg"></div>
-        <p class="kartaText">TOTO JE ŠESTÝ DIV</p>
-    </div>
-</section>
 </main>
 
 <?php View::render('footer'); ?>
