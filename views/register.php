@@ -10,7 +10,7 @@ View::render('header'); ?>
 <main>
 
     <div id="divLogin">
-        <form action="/coding-school-project/" class="formContainer" method="post" onmousemove = confirm()>
+        <form action="/coding-school-project/" class="formContainer" method="post" >
             
             <h3>Registrace</h3>
             <label for="register--email">Emailová adresa:</label>
@@ -31,8 +31,7 @@ View::render('header'); ?>
 
 <?php View::render('footer'); ?>
 
-<script src="../script/pwConfirm.js"></script>
-<script src="../script/atd.js"></script>
+<script src="./script/pwConfirm.js"></script>
 
 </body> 
   

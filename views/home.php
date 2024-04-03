@@ -9,11 +9,6 @@ View::render('header'); ?>
   
 <body> 
 
-<?php
-var_dump( parse_url($_SERVER['REQUEST_METHOD'] . $_SERVER['REQUEST_URI'])['path']);
-
-?>
-
 <div id="popRoute">
     <form action="/coding-school-project/" class="formContainer" method="post">
         <h3>Přidat novou trasu</h3>

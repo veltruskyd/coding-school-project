@@ -61,6 +61,7 @@ nav {
     background-color: #0B691F;
     height: 3rem;
     display: flex;
+    position: sticky;
 }
 
 #navigace1 {
@@ -279,6 +280,7 @@ footer {
 
 #pw--short {
     color: red;
+    display: none;
 }
 
 .chyba_404 {
