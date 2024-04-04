@@ -32,9 +32,16 @@ View::render('header'); ?>
 
 <main>
 <?php
-include "views/card.php";
+echo"<h3>$title</h3>";
 ?>
 
+<section id="best">
+
+<?php
+foreach($tracks as $track){
+    View::render('card',['track'=>$track]);
+}
+?>
 </section>
 
 </main>

@@ -21,9 +21,9 @@ View::render('header'); ?>
             <input class="form" type="password" name="login--pw" id="loginPW" required>
             <label for="login--repw">Heslo znovu:</label>
             <input class="form" type="password" name="login--repw" id="repwConf" required>
+            <button id="register--button" type="submit">Registrovat</button>
             <p id="repw--confirm">Hesla se neshodují!</p>
             <p id="pw--short">Heslo je příliš krátké!</p>
-            <button id="register--button" type="submit">Registrovat</button>
         </form>
     </div>
 

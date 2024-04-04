@@ -19,10 +19,12 @@ View::render('header'); ?>
     </div>
 
 </main>
-
-<section>
+<h3>Podobné trasy</h3>
+<section id="best">
 <?php
-include "views/card.php";
+foreach($tracks as $track) {
+    View::render('card', ['track'=>$track]);
+}
 ?>
 </section>
 
