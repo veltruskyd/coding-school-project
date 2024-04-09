@@ -9,24 +9,17 @@ View::render('header'); ?>
 
 <?php View::render('nav'); ?>
 
-<main>
-
-    <div id="divLogin">
-        <form action="/coding-school-project/" class="formContainer" method="post">
-            <h3>Hic Sunt Leones</h3>
-            
-        </form>
-    </div>
-
-</main>
-<h3>Podobné trasy</h3>
-<section id="best">
-<?php
-foreach($tracks as $track) {
-    View::render('card', ['track'=>$track]);
-}
+<main id="card_detail_main">
+<?php foreach($tracks as $track) { echo
+        '<div  id="card_detail_container">
+            <h3>' . $track['From'] . ' - ' . $track['To'] . '</h3>
+            <img class="card_detail" src="' . $track['img'] . '" alt="">
+            <button id="buttonLink"><a href="'.$track['Mapy_Link']. '"></a></button>
+            <p class="card_detail">Počet Liků: ' . $track['Like'] . '</p>
+        </div>'
+;} 
 ?>
-</section>
+</main>
 
 <?php View::render('footer'); ?>
 

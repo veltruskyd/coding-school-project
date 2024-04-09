@@ -25,16 +25,22 @@ class Track extends BaseModel
         return $this->database->dotaz('SELECT * FROM tracks ORDER BY `id` DESC');
     }
 
-    public function my() {
+    public function my(int $user_id) {
         
 
-        return $this->database->dotaz('SELECT * FROM tracks where `user_id` = 1');
+        return $this->database->dotaz("SELECT * FROM tracks where `user_id` = '$user_id' ");
     }
 
     public function card() {
         
 
         return $this->database->dotaz('SELECT * FROM tracks ORDER BY `From` DESC');
+    }
+
+    public function card_id(int $id) {
+        
+
+        return $this->database->dotaz("SELECT * FROM tracks WHERE `id` = '$id' ");
     }
 
     public function create(array $data = [])

@@ -9,7 +9,7 @@
         </div>
     </div>
     <div id="navigace2"></div>
-    <div id="navigace3"><a href="/coding-school-project/register" title="Registrace"><img class="navImg" src="/coding-school-project/images/register.svg" alt="register"></a></div>
+    <div id="navigace3"><a type="submit" method="GET" href="/coding-school-project/register" title="Registrace"><img class="navImg" src="/coding-school-project/images/register.svg" alt="register"></a></div>
     <div id="navigace4"><a href="/coding-school-project/login" title="Přihlášení"><img class="navImg" src="/coding-school-project/images/login.svg" alt="login"></a></div>
     <div id="navigace5"></div>
 </nav>

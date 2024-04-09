@@ -19,7 +19,7 @@ class CardController
 
 
     public function show() {
-            return View::render('card_detail', ['tracks'=> (new Track)->card(),]);
+            return View::render('card_detail', ['tracks'=> (new Track)->card_id($_GET['id'])]);
         }
     
 

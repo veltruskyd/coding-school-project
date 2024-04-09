@@ -19,6 +19,7 @@ $router->addRoute('/coding-school-project/my', HomeController::class, 'show', 'G
 $router->addRoute('/coding-school-project/login', LoginController::class, 'show', 'GET');
 
 $router->addRoute('/coding-school-project/register', RegisterController::class, 'show', 'GET');
+$router->addRoute('/coding-school-project/register', RegisterController::class, 'create', 'POST');
 
 $router->addRoute('/coding-school-project/card', CardController::class, 'show', 'GET');
 

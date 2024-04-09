@@ -19,15 +19,15 @@ class HomeController
 
     public function show() {
 
-        $filter = $_GET['filter'] ?? "VYCHOZI BOD";
-        var_dump($filter);
+        /*$filter = $_GET['filter'] ?? "0";
         
         return View::render('home', [
-            'tracks' => $this->track->best(), "title"=>"Nejlepší trasy"
+            'tracks' => $this->track->best($filter), "title"=>"Nejlepší trasy",
+            'tracks' => $this->track->new($filter), "title"=>"Nejnovější trasy",
 
         ]
         
-        );
+        );*/
 
         $url = parse_url($_SERVER['REQUEST_URI'])['path'];
 

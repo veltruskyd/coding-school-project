@@ -283,8 +283,45 @@ footer {
     display: none;
 }
 
+#error_message {
+    color: red;
+}
+
 .chyba_404 {
     font-size: max(5vh, 5vw);
     text-align: center;
     margin: 5vh;
+}
+
+.card_detail {
+    max-width: 450px;
+    max-height: 350px;
+    align-self: center;
+    text-align: center;
+    
+}
+
+#card_detail_container {
+    border-radius: 45px 0 45px 0;
+    border: #0B691F solid 25px;
+    height: 50vh;
+    width: 50vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh;
+    gap: 1vh;
+    animation-name: animace;
+    animation-duration: 0.5s;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    justify-content: center;
+}
+
+#card_detail_main {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    background-image: url("./images/login_background.png");
+    background-size: cover;
 }

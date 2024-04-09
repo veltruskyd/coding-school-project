@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use Core\View;
+use app\Models\User;
 
 class RegisterController
 {
@@ -11,4 +12,11 @@ class RegisterController
         View::render('register');
     }
 
+
+    public function create() {
+        (new User)->create($_POST);
+       
+    }
 }
+
+    
