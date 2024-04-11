@@ -9,7 +9,7 @@ View::render('header'); ?>
 <body> 
 
 <div id="popRoute">
-    <form action="/coding-school-project/" class="formContainer" method="post">
+    <form action="/coding-school-project/" class="formContainer" method="post" enctype="multipart/form-data">
         <h3>Přidat novou trasu</h3>
         <label for="addRouteStart">Cesta odkud:</label>
         <input class="form" type="text" name="addRouteStart" required>

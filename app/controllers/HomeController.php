@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+
+use Core\File;
 use Core\View;
 use Core\router;
 use app\Models\Track;
@@ -19,16 +21,6 @@ class HomeController
 
     public function show() {
 
-        /*$filter = $_GET['filter'] ?? "0";
-        
-        return View::render('home', [
-            'tracks' => $this->track->best($filter), "title"=>"Nejlepší trasy",
-            'tracks' => $this->track->new($filter), "title"=>"Nejnovější trasy",
-
-        ]
-        
-        );*/
-
         $url = parse_url($_SERVER['REQUEST_URI'])['path'];
 
         if($url == '/coding-school-project/new') {
@@ -42,11 +34,20 @@ class HomeController
         }
     }
 
+
     public function create()
     {
+        File::upload("./thumbnail/","addRouteImg", "ano");
         $this->track->create($_POST);
+        
+       
         header('location: /coding-school-project/');
     }
+
+
+ 
+
+
 
 } 
 ?>
