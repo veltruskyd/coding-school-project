@@ -16,6 +16,7 @@ class RegisterController
     public function create() {
         (new User)->create($_POST);
        
+    header('location: /coding-school-project/');
     }
 }
 

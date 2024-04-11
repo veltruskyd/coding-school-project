@@ -15,7 +15,7 @@ View::render('header'); ?>
             <label for="login--email">Emailová adresa:</label>
             <input class="form" type="email" name="login--email" required>
             <label for="login-pw">Heslo:</label>
-            <input class="form" type="text" name="login--pw"  required>
+            <input class="form" type="password" name="login--pw"  required>
             <button id="login--button" type="submit">Přihlásit</button>
         </form>
     </div>

@@ -22,6 +22,7 @@ $router->addRoute('/coding-school-project/register', RegisterController::class, 
 $router->addRoute('/coding-school-project/register', RegisterController::class, 'create', 'POST');
 
 $router->addRoute('/coding-school-project/card', CardController::class, 'show', 'GET');
+$router->addRoute('/coding-school-project/card', CardController::class, 'update', 'POST');
 
 
 

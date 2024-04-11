@@ -2,7 +2,6 @@
 
 use Core\View;
 use Core\router;
-use app\utils\debug;
 
 
 View::render('header'); ?>

@@ -47,5 +47,6 @@ class HomeController
         $this->track->create($_POST);
         header('location: /coding-school-project/');
     }
+
 } 
 ?>
