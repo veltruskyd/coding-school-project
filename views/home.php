@@ -17,6 +17,8 @@ View::render('header'); ?>
         <input class="form" type="text" name="addRouteEnd"  required>
         <label for="addRouteMaps">Odkaz Mapy.CZ:</label>
         <input class="form" type="text" name="addRouteMaps"  required>
+        <label for="addRouteImg">Titulní obrázek:</label>
+        <input class="form" type="file" name="addRouteImg" type="image">
         <button class="addRoute--Button" type="submit">Přidat</button>
     </form>
 </div>
