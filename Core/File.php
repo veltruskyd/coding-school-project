@@ -4,7 +4,9 @@ namespace Core;
 
 class File {
 
-    static function upload($target_dir, $file_form, $img_name) {
+    public static $final_name;
+
+    public static function upload($target_dir, $file_form, $img_name) {
     $file_name = $_FILES[$file_form]["name"];
     $file_tmp = $_FILES[$file_form]['tmp_name'];
     $file_type = $_FILES[$file_form]['type'];
@@ -20,6 +22,8 @@ class File {
     move_uploaded_file($_FILES['addRouteImg']['tmp_name'], $file);
 
     //Přejmenuje přesunutý soubor
-    rename($file, "./thumbnail/". $img_name . $type);
+    $final_name = "./thumbnail/". $img_name . $type;
+    rename($file, $final_name);
+    self::$final_name = "./thumbnail/". $img_name . $type;
     }
 }

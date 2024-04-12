@@ -8,6 +8,7 @@ use Core\View;
 use Core\router;
 use app\Models\Track;
 
+
 class HomeController
 {
     public $track;
@@ -36,9 +37,11 @@ class HomeController
 
 
     public function create()
-    {
-        File::upload("./thumbnail/","addRouteImg", "ano");
-        $this->track->create($_POST);
+    {   
+        $name = strval(date("Y-m-d-H-i-s"));
+        File::upload("./thumbnail/","addRouteImg", $name);
+
+        $this->track->create($_POST, strval(File::$final_name));
         
        
         header('location: /coding-school-project/');
