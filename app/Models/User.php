@@ -18,6 +18,7 @@ class User extends BaseModel {
         //if email exists
         if ($this->exists($data['register--email'])) {
 
+            return false;
             header('location: /coding-school-project/register?error=email_taken');
             die();
         }
@@ -26,6 +27,13 @@ class User extends BaseModel {
         VALUES (" . "'" .$data['register--email']. "'" . ", " . "'" .$data['login--pw']. "'" . ")";
 
         $this->database->dotaz($sql);
+        return true;
+    }
+
+
+    public function findByEmail($email) {
+        $sql = "SELECT * FROM users WHERE email = '$email'";
+        return $this->database->dotaz($sql)[0];
     }
 
 

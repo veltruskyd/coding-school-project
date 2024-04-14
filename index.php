@@ -1,6 +1,6 @@
 <?php
 
-use app\utils\Debug;
+session_start();
 
 //Iniciace vložených částí
 //////////////////////////////////////////////////////

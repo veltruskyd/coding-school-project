@@ -52,7 +52,7 @@ class Track extends BaseModel
 
     public function create(array $data = [], $path) {
         $this->database->dotaz ("INSERT INTO tracks (user_id,`From`,`To`, Mapy_link,img) 
-        VALUES (1," . "'" .$data['addRouteStart']. "'" . ", " . "'" .$data['addRouteEnd']. "'" . "," . "'" .$data['addRouteMaps']. "'" . ", '$path')");
+        VALUES (". "'" . $data['user_id']. "'" .  "," . "'" .$data['addRouteStart']. "'" . ", " . "'" .$data['addRouteEnd']. "'" . "," . "'" .$data['addRouteMaps']. "'" . ", '$path')");
 
     }
 

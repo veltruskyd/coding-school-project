@@ -10,7 +10,7 @@ View::render('header'); ?>
 <main>
 
     <div id="divLogin">
-        <form action="/coding-school-project/" class="formContainer" method="post">
+        <form action="/coding-school-project/login" class="formContainer" method="post">
             <h3>Přihlášení</h3>
             <label for="login--email">Emailová adresa:</label>
             <input class="form" type="email" name="login--email" required>

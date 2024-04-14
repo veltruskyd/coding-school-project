@@ -1,5 +1,6 @@
 <?php 
 
+use Core\Auth;
 use Core\View;
 use Core\router;
 
@@ -11,6 +12,7 @@ View::render('header'); ?>
 <div id="popRoute">
     <form action="/coding-school-project/" class="formContainer" method="post" enctype="multipart/form-data">
         <h3>Přidat novou trasu</h3>
+        <input name="user_id" type="hidden" value="<?php echo Auth::user() ?>">
         <label for="addRouteStart">Cesta odkud:</label>
         <input class="form" type="text" name="addRouteStart" required>
         <label for="addRouteEnd">Cesta kam:</label>
