@@ -1,5 +1,6 @@
 <?php 
 
+use Core\Auth;
 use Core\View;
 
 View::render('header'); ?>
@@ -16,8 +17,10 @@ View::render('header'); ?>
             <a class="card_detail" href="'.$track['Mapy_Link']. '" target="_blank">Jdi na MAPY.CZ</a>
             <p class="card_detail">Počet Liků: ' . $track['Like'] . '</p>
             <div class="like">
-                <div>
-                    <form action="" method="post">
+                <div>';
+                if(Auth::user()) { 
+                    echo(
+                    '<form action="" method="post">
                         <button type="submit" role="button" name="getlike" id="minus" class="like" value=-1>-</button>
                     </form>
                 </div>
@@ -25,8 +28,8 @@ View::render('header'); ?>
                 <div>
                     <form action="" method="post">
                         <button type="submit" role="button" name="getlike" id="plus" class="like" value=1>+</button>
-                    </form>
-                </div>
+                    </form>');}
+                '</div>
             </div>
         </div>'
 ;} 

@@ -6,11 +6,12 @@ use Core\router;
 
 
 View::render('header'); ?>
-  
+<html>
 <body> 
 
+
 <div id="popRoute">
-    <form action="/coding-school-project/" class="formContainer" method="post" enctype="multipart/form-data">
+<form action="/coding-school-project/" class="formContainer" method="post" enctype="multipart/form-data">
         <h3>Přidat novou trasu</h3>
         <input name="user_id" type="hidden" value="<?php echo Auth::user() ?>">
         <label for="addRouteStart">Cesta odkud:</label>
@@ -30,7 +31,10 @@ View::render('header'); ?>
 <header>
     <h1>C</h1>
     <h2>Cyklistika pohodlně</h2>
-    <button id="buttonLink">Přidej trasu</button>
+    <?php
+    if(Auth::user()) { 
+    echo('<button id="buttonLink">Přidej trasu</button>');}
+    ?>
 </header>
 
 <main>

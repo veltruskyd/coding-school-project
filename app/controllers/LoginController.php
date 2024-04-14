@@ -40,4 +40,10 @@ class LoginController
         }
     }
 
+    public function logout()
+    {
+        Auth::logout();
+        return header('location: /coding-school-project/');
+    }
+
 }

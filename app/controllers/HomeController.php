@@ -37,12 +37,10 @@ class HomeController
 
 
     public function create()
-    {   
+    {
         $name = strval(date("Y-m-d-H-i-s"));
         File::upload("./thumbnail/","addRouteImg", $name);
-
         $this->track->create($_POST, strval(File::$final_name));
-        
        
         header('location: /coding-school-project/');
     }

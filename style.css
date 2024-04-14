@@ -130,13 +130,19 @@ nav {
     width: 3vh;
     height: 3vh;
     object-fit: scale-down;
+}
 
+.navImg_out {
+    width: 3vh;
+    height: 3vh;
+    object-fit: scale-down;
+    filter: invert(14%) sepia(61%) saturate(5665%) hue-rotate(355deg) brightness(94%) contrast(121%);
 }
 
 
 a {
     text-decoration: none;
-    color: antiquewhite;
+    color: rgb(250, 215, 215);
 }
 
 header {

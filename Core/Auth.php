@@ -2,6 +2,8 @@
 
 namespace Core;
 
+
+
 class Auth {
 
     public static function user(): int|null {

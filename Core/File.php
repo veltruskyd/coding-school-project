@@ -23,8 +23,14 @@ class File {
     move_uploaded_file($_FILES['addRouteImg']['tmp_name'], $file);
 
     //Přejmenuje přesunutý soubor
-    $final_name = "./thumbnail/". $img_name . $type;
-    rename($file, $final_name);
-    self::$final_name = "./thumbnail/". $img_name . $type;
+    
+        $final_name = "./thumbnail/". $img_name . $type;
+        rename($file, $final_name);
+
+        if($_FILES['addRouteImg']['size'] == 0) {
+            self::$final_name = "./thumbnail/default_card.png";
+        }else{
+            self::$final_name = "./thumbnail/". $img_name . $type;
+        }
     }
 }
