@@ -21,8 +21,4 @@ class BaseModel {
         return $this->data;
     }
 
-    public function find($id)
-    {
-        //vrátí usera s konkrétním ID
-    }
 }

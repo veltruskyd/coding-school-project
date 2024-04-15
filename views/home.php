@@ -32,6 +32,7 @@ View::render('header'); ?>
     <h1>C</h1>
     <h2>Cyklistika pohodlně</h2>
     <?php
+    //Pokud uživatel není přihlášen, tak se toto tlačítko nevykreslí.
     if(Auth::user()) { 
     echo('<button id="buttonLink">Přidej trasu</button>');}
     ?>

@@ -17,8 +17,7 @@ class RegisterController
     public function create() {
         if ((new User)->create($_POST)) {
 
-            $user_id = (new User)->findByEmail($_POST['register--email']);
-            $user_id = intval($user_id[0]["id"]);
+            $user_id = (new User)->findByEmail($_POST['register--email'])['id'];
             Auth::login($user_id);
             header('location: /coding-school-project/');
        }else{
