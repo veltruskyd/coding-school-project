@@ -36,7 +36,7 @@ class LoginController
                 return header('location: /coding-school-project/');
             }
 
-            header('location: /coding-school-project/login?error="wrong_credetials"');
+            header('location: /coding-school-project/login?error=wrong_credentials');
         }
     }
 

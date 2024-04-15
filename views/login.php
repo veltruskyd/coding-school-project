@@ -5,7 +5,12 @@ View::render('header'); ?>
   
 <body> 
 
-<?php View::render('nav'); ?>
+<?php View::render('nav'); 
+
+$errors = 
+['email_taken'=>'Tento email je již registrován',
+'wrong_credentials'=>'Chybné přihlašovací údaje'];
+?>
 
 <main>
 
@@ -17,6 +22,7 @@ View::render('header'); ?>
             <label for="login-pw">Heslo:</label>
             <input class="form" type="password" name="login--pw"  required>
             <button id="login--button" type="submit">Přihlásit</button>
+            <?php if(isset($_GET['error'])) echo ('<p id="error_message">'.$errors[$_GET['error']].'</p>'); ?>
         </form>
     </div>
 
