@@ -39,8 +39,8 @@ class HomeController
     public function create()
     {   //Převede na string a uloží jméno nahraného souboru jako aktuální datum a čas
         $img_name = strval(date("Y-m-d-H-i-s"));
-        File::upload("./thumbnail/","addRouteImg", $img_name, "./thumbnail/default_card.png");
-        $this->track->create($_POST, strval(File::$final_name));
+        $name = File::upload("./thumbnail/","addRouteImg", $img_name, "./thumbnail/default_card.png");
+        $this->track->create($_POST, $name);
        
         header('location: /coding-school-project/');
     }

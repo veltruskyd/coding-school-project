@@ -38,9 +38,9 @@ class File {
         
     //Pokud není soubor vložen, odešle do databáze odkaz na defaultní obrázek ($if_blank).
         if($_FILES[$file_form]['size'] == 0) {
-            self::$final_name = $if_blank;
+            return $final_name = $if_blank;
         }else{
-            self::$final_name = $target_dir . $img_name . $type;
+            return $final_name = $target_dir . $img_name . $type;
         }
     }
 }
