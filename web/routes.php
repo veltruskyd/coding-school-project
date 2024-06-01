@@ -1,10 +1,11 @@
 <?php 
 
 use Core\router;
+use App\Controllers\CardController;
+use App\Controllers\HomeController;
+use app\controllers\TestController;
 use App\Controllers\LoginController;
 use App\Controllers\RegisterController;
-use App\Controllers\HomeController;
-use App\Controllers\CardController;
 
 $router = new router();
 
@@ -25,6 +26,9 @@ $router->addRoute('/coding-school-project/register', RegisterController::class, 
 
 $router->addRoute('/coding-school-project/card', CardController::class, 'show', 'GET');
 $router->addRoute('/coding-school-project/card', CardController::class, 'update', 'POST');
+
+$router->addRoute('/coding-school-project/test', TestController::class, 'show', 'GET');
+$router->addRoute('/coding-school-project/test', TestController::class, 'send', 'POST');
 
 
 
